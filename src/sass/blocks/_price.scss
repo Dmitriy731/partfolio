@@ -1,0 +1,41 @@
+.price {
+    padding-top: 65px;
+    .divider {
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    &__wrapper {
+        margin-top: 60px;
+        display: grid;
+        grid-template: repeat(3, 44px) / repeat(2, 370px);
+        row-gap: 15px;
+        justify-content: space-between;
+        align-content: space-between;
+        &_services {
+            display: grid;
+            grid-template-columns: 186px 125px;
+            grid-template-rows: 21px 18px;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        &_page {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 21px;
+            grid-column: 1 / 2;
+        }
+        &_money {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 21px;
+            grid-column: 2 / 3;
+            text-align: right;
+        }
+        &_descr {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            grid-column: 1 / 3;
+        }
+    }
+}

@@ -1,0 +1,78 @@
+.my {
+    &__grid {
+        margin-top: 120px;
+        display: grid;
+        grid-template-columns: 400px 670px;
+        grid-template-rows: minmax(215px, auto);
+        gap: 40px 70px;
+    }
+    &_photo {
+        width: 400px;
+        height: 600px;
+        overflow: hidden;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__info {
+        width: 100%;
+        min-height: 200px;
+        &_title {
+            position: relative;
+            padding-left: 14px;
+            @include before_circle;
+            &:before {
+                left: 0px;
+            }
+        }
+        &_descr {
+            margin-top: 20px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+    &__skills {
+        width: 100%;
+        min-height: 240px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+        &_subtitle {
+            font-weight: bold;
+            font-size: 14px;
+        }
+        &_descr {
+            font-weight: 500;
+            font-size: 12px;
+        }
+        &_development {
+            position: relative;
+            width: 320px;
+            min-height: 100px;
+            margin-bottom: 20px;
+        }
+        &_tunica {
+            margin-left: 60px;
+        }
+        &_icon {
+            position: absolute;
+            top: 15px;
+            left: 10px;
+            @include before_circle;
+            &:before {
+                top: -15px;
+                left: -10px;
+            }
+        }
+        &_icons {
+            position: absolute;
+            left: 10px;
+        }
+    }
+}

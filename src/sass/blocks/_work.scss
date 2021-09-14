@@ -1,0 +1,67 @@
+.work {
+    margin-top: 125px;
+    .divider {
+        margin: 0 auto;
+        margin-top: 25px;
+    }
+    &__use {
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        grid-template-rows: repeat(2, 270px);
+        gap: 13px;
+        margin-top: 60px;
+        &_development {
+            border: 1px solid #000000;
+            box-sizing: border-box;
+            padding: 30px 30px 30px 30px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &_img {
+            height: 65px;
+            margin-bottom: 20px;
+        }
+        &_title {
+            margin-bottom: 15px;
+        }
+    }
+    &__percent {
+        margin-top: 125px;
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: repeat(2, 62px);
+        gap: 38px 45px;
+        &_wrapper {
+            display: grid;
+            grid-template-columns: 170px 34px;
+            grid-template-rows: 21px 14px;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        &_creature {
+            position: relative;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 21px;
+            padding-left: 14px;
+            @include before_circle;
+            &:before {
+                left: 0;
+                top: -8px;
+            }
+        }
+        &_line {
+            position: relative;
+            width: 350px;
+            height: 14px;
+            background: #E8E4DE;
+            border-radius: 4px;
+            span {
+                position: absolute;
+                height: 100%;
+                background: $main-color;
+                border-radius: 4px;
+            }
+        }
+    }
+}
